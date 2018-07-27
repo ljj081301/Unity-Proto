@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class mover : MonoBehaviour {
 
     public float speed = 0.5f;
 
@@ -15,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKey(KeyCode.UpArrow))
         {
-            this.transform.Translate(0, 0, speed * Time.deltaTime);
+            this.transform.Translate(0, speed * Time.deltaTime, 0);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -23,7 +23,7 @@ public class NewBehaviourScript : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            this.transform.Translate(0, 0, -speed * Time.deltaTime);
+            this.transform.Translate(0, -speed * Time.deltaTime, 0);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
