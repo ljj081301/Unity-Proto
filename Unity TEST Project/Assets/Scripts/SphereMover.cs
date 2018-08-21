@@ -9,18 +9,29 @@ public class SphereMover : MonoBehaviour {
     public int HP;
     public float movePower;
     public float jumpPower;
-    public string chara_stat;
+    public string chara_stat = "none";
 
     // Use this for initialization
     void Start() {
         rigid = GetComponent<Rigidbody>();
  
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (chara_stat == "damaged")
+        {
+            HP = HP - 1;
+            if (HP<=0)
+            {
+                HP = 0;
+                Debug.Log("YOU DIED");
+            }
+        }
+
+    }
+
 
     void FixedUpdate()
     {
@@ -29,13 +40,14 @@ public class SphereMover : MonoBehaviour {
 
         rigid.AddForce(new Vector3(h, 0, v), ForceMode.Impulse); 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             rigid.AddForce(new Vector3(0, jumpPower, 0), ForceMode.Impulse);
         }
 
     }
 
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "heal_zone")
@@ -44,36 +56,30 @@ public class SphereMover : MonoBehaviour {
             Debug.Log("힐링상태진입");
         }
     }
-
+    
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "heal_zone")
         {
-            while (chara_stat == "heal")
+            if (chara_stat == "heal")
             {
-                HP = HP + 10;
-                if (HP >= 200)
-                    HP = 200;
-                    break;
+                HP = HP + 2;
+               
+                if (HP >= 500)
+                    HP = 500;
             }
-
-            chara_stat = "none";
-            Debug.Log("논상태진입");
-            
         }
 
     }
+
+  
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "heal_zone")
         {
             chara_stat = "damaged";
             Debug.Log("대미지상태진입");
-            while (chara_stat == "damaged")
-            {
-                HP = HP - 30;
-                System.Threading.Thread.Sleep(1000);
-            }
+
         }
     }
 }
