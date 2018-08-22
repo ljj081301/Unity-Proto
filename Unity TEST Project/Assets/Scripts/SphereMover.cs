@@ -14,7 +14,6 @@ public class SphereMover : MonoBehaviour {
     // Use this for initialization
     void Start() {
         rigid = GetComponent<Rigidbody>();
- 
     }
 
     // Update is called once per frame
@@ -26,6 +25,7 @@ public class SphereMover : MonoBehaviour {
             if (HP<=0)
             {
                 HP = 0;
+                Destroy(gameObject);
                 Debug.Log("YOU DIED");
             }
         }

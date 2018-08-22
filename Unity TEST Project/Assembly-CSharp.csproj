@@ -61,8 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ParticleController.cs" />
     <Compile Include="Assets\Scripts\SphereMover.cs" />
-    <Compile Include="Assets\리지드바디.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Programing/#Git/Unity Proto - J2L/Unity TEST Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
