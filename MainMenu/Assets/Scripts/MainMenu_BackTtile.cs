@@ -19,4 +19,9 @@ public class MainMenu_BackTtile : MonoBehaviour {
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Stage_1()
+    {
+        SceneManager.LoadScene(2);
+    }
 }

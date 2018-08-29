@@ -61,19 +61,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Camera_Mover.cs" />
     <Compile Include="Assets\Scripts\MainMenu_BackTtile.cs" />
     <Compile Include="Assets\Scripts\MainMenu_GameStart.cs" />
+    <Compile Include="Assets\Scripts\Player_Mover.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Programing/#Git/Unity Proto - JHN/Unity/MainMenu/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Programing/#Git/Unity Proto - J2L/MainMenu/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Programing/#Git/Unity Proto - JHN/Unity/MainMenu/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Programing/#Git/Unity Proto - J2L/MainMenu/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Programing/#Git/Unity Proto - JHN/Unity/MainMenu/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Programing/#Git/Unity Proto - J2L/MainMenu/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Programing/#Git/Unity Proto - JHN/Unity/MainMenu/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Programing/#Git/Unity Proto - J2L/MainMenu/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
